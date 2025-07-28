@@ -10,9 +10,9 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ backgroundImage: `url(${background})` }}>
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <h1>Clicks: {count}</h1>
+    <div className="App" style={{ backgroundImage: `url(${background})`, width  : "100%", height: "100vh", backgroundSize: "cover" }}>
+      <div style={{ textAlign: "center"}}>
+        <h1 style={{ margin: "0" }}>Clicks: {count}</h1>
         <button onClick={clicker}>Clique-moi !</button>
       </div>
     </div>
