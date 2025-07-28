@@ -1,3 +1,4 @@
+import background from './assets/background.jpg';
 import './App.css';
 import { useState } from 'react';
 
@@ -9,9 +10,11 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Clicks: {count}</h1>
-      <button onClick={clicker}>Clique-moi !</button>
+    <div className="App" style={{ backgroundImage: `url(${background})` }}>
+      <div style={{ textAlign: "center", marginTop: "50px" }}>
+        <h1>Clicks: {count}</h1>
+        <button onClick={clicker}>Clique-moi !</button>
+      </div>
     </div>
   );
 }
