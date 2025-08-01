@@ -39,6 +39,26 @@ function App() {
   }, []);
 
 
+    const submitScore = async () => {
+    if (!name) return alert('Entre ton nom !');
+    await fetch('/.netlify/functions/submitScore', {
+      method: 'POST',
+      body: JSON.stringify({ name, score: count }),
+    });
+    fetchScores();
+  };
+
+  const fetchScores = async () => {
+    const res = await fetch('/.netlify/functions/getScores');
+    const data = await res.json();
+    setScoreboard(data);
+  };
+
+  useEffect(() => {
+    fetchScores();
+  }, []);
+
+
   return (
     <div className="App" style={{ backgroundImage: `url(${background})`, width  : "100%", height: "100vh", backgroundSize: "cover" }}>
       <div style={{ textAlign: "center"}}>
