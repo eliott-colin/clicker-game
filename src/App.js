@@ -4,6 +4,8 @@ import { useState, useEffect , useRef } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [name, setName] = useState('');
+  const [scoreboard, setScoreboard] = useState([]);
   const [cpm, setCpm] = useState(0);
    const clickTimestampsRef = useRef([]);
    
@@ -67,6 +69,21 @@ function App() {
         <button onClick={clicker}>Clique-moi !</button>
         <p style={{ marginTop: "20px" }}>Moyenne : {cpm} clicks par secondes.</p>
       </div>
+      <input
+        placeholder="Ton nom"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button onClick={submitScore}>Envoyer mon score</button>
+
+      <h2>🏆 Classement</h2>
+      <ul>
+        {scoreboard.map((entry, i) => (
+          <li key={i}>
+            {entry.name} - {entry.score}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
