@@ -4,8 +4,6 @@ import { useState, useEffect , useRef } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState('');
-  const [scoreboard, setScoreboard] = useState([]);
   const [cpm, setCpm] = useState(0);
    const clickTimestampsRef = useRef([]);
    
@@ -41,26 +39,6 @@ function App() {
   }, []);
 
 
-    const submitScore = async () => {
-    if (!name) return alert('Entre ton nom !');
-    await fetch('/.netlify/functions/submitScore', {
-      method: 'POST',
-      body: JSON.stringify({ name, score: count }),
-    });
-    fetchScores();
-  };
-
-  const fetchScores = async () => {
-    const res = await fetch('/.netlify/functions/getScores');
-    const data = await res.json();
-    setScoreboard(data);
-  };
-
-  useEffect(() => {
-    fetchScores();
-  }, []);
-
-
   return (
     <div className="App" style={{ backgroundImage: `url(${background})`, width  : "100%", height: "100vh", backgroundSize: "cover" }}>
       <div style={{ textAlign: "center"}}>
@@ -69,21 +47,6 @@ function App() {
         <button onClick={clicker}>Clique-moi !</button>
         <p style={{ marginTop: "20px" }}>Moyenne : {cpm} clicks par secondes.</p>
       </div>
-      <input
-        placeholder="Ton nom"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <button onClick={submitScore}>Envoyer mon score</button>
-
-      <h2>🏆 Classement</h2>
-      <ul>
-        {scoreboard.map((entry, i) => (
-          <li key={i}>
-            {entry.name} - {entry.score}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
