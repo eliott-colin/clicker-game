@@ -64,5 +64,5 @@ Le jeu est automatiquement déployé sur **Netlify** à chaque push sur la branc
 - ✅ Clicker de base avec compteur
 - ✅ Calcul des clicks par minute (CPM)
 - 🔄 Scoreboard en ligne
-- ![#c5f015🔑 Gestion de compte / login
-- 🐾 Ajout futur de **Pokémons** (collection de +200)]  
+- ![#c5f015]🔑 Gestion de compte / login
+- 🐾 Ajout futur de **Pokémons** (collection de +200)  
