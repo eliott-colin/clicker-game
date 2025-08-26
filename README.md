@@ -66,4 +66,6 @@ Le jeu est automatiquement déployé sur **Netlify** à chaque push sur la branc
 - 🔄 Scoreboard en ligne
 - ![#c5f015]🔑 Gestion de compte / login
 - 🐾 Ajout futur de **Pokémons** (collection de +200)
-- - ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) `#1589F0` 
+```diff
+- text in red
++ text in green```
