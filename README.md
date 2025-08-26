@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000000)
 
 Bienvenue sur le repo de mon **Clicker Game**, développé en **React** et déployé sur **Netlify**.  
-👉 [Voir le jeu en ligne](https://ton-lien-netlify.netlify.app/)
+👉 [Voir le jeu en ligne](https://clickemon.netlify.app/)
 
 ---
 
@@ -55,7 +55,7 @@ clicker-game/
 ## 🚀 Déploiement
 
 Le jeu est automatiquement déployé sur **Netlify** à chaque push sur la branche `main`.  
-👉 [Voir la version en ligne](https://ton-lien-netlify.netlify.app/)
+👉 [Voir la version en ligne](https://clickemon.netlify.app/)
 
 ---
 
@@ -64,5 +64,5 @@ Le jeu est automatiquement déployé sur **Netlify** à chaque push sur la branc
 - ✅ Clicker de base avec compteur
 - ✅ Calcul des clicks par minute (CPM)
 - 🔄 Scoreboard en ligne
-- 🔑 Gestion de compte / login
-- 🐾 Ajout futur de **Pokémons** (collection de +200)  
+- ![#c5f015🔑 Gestion de compte / login
+- 🐾 Ajout futur de **Pokémons** (collection de +200)]  
